@@ -1,0 +1,22 @@
+
+<div class="container my-4">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h5 class="mb-0">Top speakers</h5>
+    <button class="btn btn-outline-secondary btn-sm">View all</button>
+  </div>
+
+  <div class="d-flex overflow-auto">
+    <div *ngFor="let speaker of speakers" class="speaker-card mr-3 flex-shrink-0">
+      <div class="speaker-img-container position-relative mx-auto">
+        <img [src]="speaker.image" class="rounded-circle speaker-img">
+        <div *ngIf="speaker.live" class="live-badge position-absolute">
+       <i class="fa-solid fa-wifi"></i>Live
+        </div>
+      </div>
+      <div class="text-center mt-2">
+        <strong>{{ speaker.name }}</strong>
+        <div class="text-muted small">{{ speaker.specialty }}</div>
+      </div>
+    </div>
+  </div>
+</div>

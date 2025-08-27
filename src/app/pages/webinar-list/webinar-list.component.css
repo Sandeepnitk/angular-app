@@ -1,0 +1,207 @@
+/* General Layout */
+.container {
+  max-width: 1200px;
+}
+
+/* Tabs */
+.nav-tabs .nav-link {
+  border: none;
+  color: #6c757d;
+  font-weight: 500;
+  padding: 10px 16px;
+}
+.nav-tabs .nav-link.active {
+  color: #000;
+  border-bottom: 3px solid #007bff;
+  background: transparent;
+}
+
+/* Card Styling */
+.card {
+  border-radius: 12px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+.card-img-top {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  object-fit: cover;
+  height: 180px;
+}
+
+.card-inner {
+  background-image: linear-gradient(180deg, #FFD8BD, #FFFFFF)
+}
+
+
+/* Badges */
+.badge {
+ font-size: 0.75rem;
+    padding: 0.35em 0.8em;
+    border-radius: 1.8rem;
+}
+.badge-danger {
+  background: #e63946;
+}
+.badge-warning {
+  background: #f4a261;
+}
+.badge-dark {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 6px;
+}
+
+/* Card Body */
+.card-body h6 {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+.card-body small {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Highlights Box */
+.card-body .border {
+  border-radius: 8px;
+  font-size: 0.8rem;
+  line-height: 1.3;
+}
+
+/* Card Footer */
+.card-footer {
+  background: #D9F4F9;
+  border-top: 1px solid #f0f0f0;
+}
+
+.card-footer-dark {
+  font-weight: 700;
+  color: #1D1919;
+}
+
+.card-footer button {
+  font-size: 0.85rem;
+  border-radius: 6px;
+}
+
+/* Utility */
+.text-muted {
+  font-size: 0.85rem;
+}
+
+.speaker-card {
+  width: 216px;
+  background: linear-gradient(to bottom, #fbeeee, #fff);
+  border-radius: 10px;
+  padding: 15px 10px;
+  text-align: center;
+  border: 1px solid #f0f0f0;
+}
+
+.speaker-img-container {
+  width: 60px;
+  height: 60px;
+}
+
+.speaker-img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid transparent;
+}
+
+.live-badge {
+  top: -5px;
+  left: -5px;
+  background: #fff;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  padding: 2px 6px;
+  color: red;
+  font-weight: bold;
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.related-guideline {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.card-img-top {
+  height: 150px;
+  object-fit: cover;
+}
+
+.btn-outline-primary {
+  border:none;
+}
+
+.three-dots {
+transform: rotate(90deg);
+background: none;
+}
+
+/* .badge {
+  font-size: 0.75rem;
+  padding: 0.35em 0.65em;
+  border-radius: 0.5rem;
+} */
+
+.webinar-scroll-container {
+  padding-bottom: 10px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+  overflow-x: scroll;  /* Enables scrolling */
+  scrollbar-width: none;  /* For Firefox */
+  -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+}
+.webinar-card {
+  width: 250px;
+  border-radius: 10px;
+  overflow: hidden;  /* Prevents the image or content from overflowing the card */
+  position: relative;
+  scroll-snap-align: start;
+}
+
+.webinar-image {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.speaker-img {
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  bottom: -24px;
+  left: 12px;
+  border: 2px solid #fff;
+  background: #fff;
+}
+
+.timer-overlay {
+  position: absolute;
+  bottom: 8px;
+  right: 12px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.webinar-scroll-container::-webkit-scrollbar {
+  display: none;  /* For Chrome, Safari, and Opera */
+}
