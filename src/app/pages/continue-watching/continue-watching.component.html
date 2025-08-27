@@ -1,1 +1,30 @@
-<p>continue-watching works!</p>
+  <!-- Countinue waching -->
+  <div class="d-flex justify-content-between align-items-center mb-3 mt-5">
+    <h5 class="mb-0">Countinue waching</h5>
+    <button class="btn btn-outline-secondary btn-sm">View all</button>
+  </div>
+
+<div class="webinar-scroll-container d-flex overflow-auto">
+  <div class="webinar-card card mr-3 flex-shrink-0" *ngFor="let webinar of continueWatching">
+    <div class="position-relative">
+      <img [src]="webinar.image" class="card-img-top webinar-image" alt="Banner">
+      
+      <!-- Speaker circle image -->
+      <!-- <img *ngIf="webinar.speakerImage" [src]="webinar.speakerImage" class="speaker-img rounded-circle"> -->
+      
+      <!-- Timer overlay -->
+      <div class="timer-overlay">
+        {{ webinar.timeLeft }}
+      </div>
+    </div>
+    
+    <div class="card-body pt-4">
+      <h6 class="webinar-title mb-1 text-truncate" title="{{ webinar.title }}">
+        {{ webinar.title }}
+      </h6>
+      <p class="text-muted small mb-0">
+        by {{ webinar.presenter }} • {{ webinar.minutesLeft }} min left
+      </p>
+    </div>
+  </div>
+</div>

@@ -140,6 +140,9 @@
   height: 150px;
   object-fit: cover;
 }
+.badge-danger{
+    background-color: #FFD8BD;
+}
 
 .btn-outline-primary {
   border:none;

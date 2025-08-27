@@ -91,75 +91,11 @@
 
 
   
-  <!-- Countinue waching -->
-  <div class="d-flex justify-content-between align-items-center mb-3 mt-5">
-    <h5 class="mb-0">Countinue waching</h5>
-    <button class="btn btn-outline-secondary btn-sm">View all</button>
-  </div>
-
-<div class="webinar-scroll-container d-flex overflow-auto">
-  <div class="webinar-card card mr-3 flex-shrink-0" *ngFor="let webinar of continueWatching">
-    <div class="position-relative">
-      <img [src]="webinar.image" class="card-img-top webinar-image" alt="Banner">
-      
-      <!-- Speaker circle image -->
-      <!-- <img *ngIf="webinar.speakerImage" [src]="webinar.speakerImage" class="speaker-img rounded-circle"> -->
-      
-      <!-- Timer overlay -->
-      <div class="timer-overlay">
-        {{ webinar.timeLeft }}
-      </div>
-    </div>
-    
-    <div class="card-body pt-4">
-      <h6 class="webinar-title mb-1 text-truncate" title="{{ webinar.title }}">
-        {{ webinar.title }}
-      </h6>
-      <p class="text-muted small mb-0">
-        by {{ webinar.presenter }} • {{ webinar.minutesLeft }} min left
-      </p>
-    </div>
-  </div>
-</div>
 
 
+<app-continue-watching></app-continue-watching>
+<app-cardiology></app-cardiology>
 
-
-
-  <div class="container my-4">
-  <h4>Webinars based on cardiology</h4>
-  <div class="row">
-    <div class="col-md-4" *ngFor="let webinar of webinars">
-      <div class="card mb-4 shadow-sm">
-        <img class="card-img-top" [src]="webinar.image" alt="Webinar image">
-        <div class="card-body">
-          <span class="badge card-inner mb-2">{{ webinar.credits }} Credits</span>
-          <h6 class="card-title">{{ webinar.title }}</h6>
-          <p class="card-text"><small class="text-muted">{{ webinar.organization }}</small></p>
-
-           <div class="d-flex align-items-center border rounded card-inner mb-3" style="font-size: 0.85rem;">
-      <img src="assets/images/card_side.png" class="mr-2 rounded" alt="Guideline image">
-      <div>
-        <div class="text-muted font-weight-bold mb-1" style="font-size: 0.75rem;">RELATED GUIDELINE</div>
-        Diclofenac in post operative pain ma...
-      </div>
-    </div>
-          <!-- <button *ngIf="webinar.watchNow" class="btn btn-dark btn-sm btn-block">Watch now</button>
-          <button *ngIf="webinar.notify" class="btn btn-outline-primary btn-sm btn-block">
-            Notify me <br><small>{{ webinar.goLive }}</small>
-          </button> -->
-        <div *ngIf="webinar.watchNow" class="card-footer bg-white border-0 p-0">
-          <button class="btn btn-dark btn-block">Watch now</button>
-        </div>
-          <div *ngIf="webinar.notify" class="card-footer border-0 d-flex justify-content-between align-items-center m-0">
-          <small class="text-muted">Goes live on<br><span class="card-footer-dark">{{ webinar.goLive }}</span></small>
-          <button class="btn btn-outline-dark btn-sm" style="background-color: black;color: #ffff;"><i class="fa-regular fa-bell"></i> Notify me</button>
-        </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
 <app-top-speakers></app-top-speakers>
 
@@ -174,7 +110,7 @@
   <div class="p-3 rounded" style="background-color: #e7f7fc;">
     <div class="d-flex flex-wrap gap-2">
       <span
-        class="badge rounded-pill bg-light text-dark border"
+        class="badge rounded-pill bg-light text-dark border m-1"
         *ngFor="let topic of topics"
       >
         {{ topic.name }} ({{ topic.count }})
@@ -244,7 +180,7 @@
               <h6 class="fw-bold">{{ webinar.title }}</h6>
 
               <!-- Highlights -->
-              <div class="bg-light border rounded p-2 small mb-3" style="border-left: 4px solid #f8c291">
+              <div class="bg-light border rounded p-2 small mb-3 card-inner" style="border-left: 4px solid #f8c291">
                 <strong>KEY HIGHLIGHTS</strong><br />
                 {{ webinar.highlights }}
               </div>
@@ -284,16 +220,8 @@
         </div>
       </div>
 
-      <!-- Image -->
-      <!-- <div class="position-relative">
-        <img [src]="webinar.image" class="img-fluid" alt="Webinar Banner" />
-        <span class="badge bg-dark text-white position-absolute bottom-0 end-0 m-2">{{ webinar.duration }}</span>
-        <span *ngIf="webinar.live" class="badge bg-danger text-white position-absolute top-0 start-0 m-2">🔴 Live</span>
-      </div> -->
       <div class="position-relative">
           <img [src]="webinar.image"  class="img-fluid" alt="Live Webinar" />
-          <!-- <div class="badge badge-danger position-absolute" style="top: 10px; left: 10px;">🔴 Live</div> -->
-          <!-- <div class="badge badge-dark position-absolute" style="top: 10px; right: 10px;">👥 200+</div> -->
           <div class="position-absolute text-white bg-dark px-2" style="bottom: 5px; right: 10px;">{{ webinar.duration }}</div>
         </div>
 

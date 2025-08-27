@@ -7,6 +7,7 @@ import { HeaderComponent } from './shared/header/header.component';
 import { WebinarListComponent } from './pages/webinar-list/webinar-list.component';
 import { TopSpeakersComponent } from './pages/top-speakers/top-speakers.component';
 import { ContinueWatchingComponent } from './pages/continue-watching/continue-watching.component';
+import { CardiologyComponent } from './pages/cardiology/cardiology.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ContinueWatchingComponent } from './pages/continue-watching/continue-wa
     HeaderComponent,
     WebinarListComponent,
     TopSpeakersComponent,
-    ContinueWatchingComponent
+    ContinueWatchingComponent,
+    CardiologyComponent
   ],
   imports: [
     BrowserModule,
