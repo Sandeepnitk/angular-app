@@ -1,39 +1,66 @@
 <header class="header">
-  <div class="d-flex align-items-center">
-  <div class="logo-section ml-4">
-    <img src="assets/icons/logo_icon.png" alt="Logo" class="logo" />
-    <!-- <span class="app-name">Webinar</span> -->
-  </div>
-<!-- 
-<div class="container mt-4">
-  <div class="row justify-content-center"> -->
-    <div class="col-md-6">
-      <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search in docquity" aria-label="Search" aria-describedby="search-icon">
-        <div class="input-group-append">
-          <span class="input-group-text" id="search-icon">
-            <i class="fas fa-search"></i>
-          </span>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center ml-3" href="#">
+      <img src="assets/icons/logo_icon.png" alt="Logo" class="logo" style="height:40px;">
+    </a>
+
+    <!-- Toggler (hamburger) -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
+      aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarContent">
+      
+      <!-- Search bar -->
+      <form class="form-inline my-2 my-lg-0 mx-auto">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search in docquity" aria-label="Search">
+          <div class="input-group-append">
+            <span class="input-group-text"><i class="fas fa-search"></i></span>
+          </div>
+        </div>
+      </form>
+
+      <!-- Nav links -->
+      <ul class="navbar-nav mx-auto text-center">
+        <li class="nav-item">
+          <a class="nav-link d-flex flex-column align-items-center" routerLink="/home">
+            <i class="fa fa-house"></i>
+            <span>Home</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link d-flex flex-column align-items-center" routerLink="/webinar">
+            <img src="assets/icons/web.png" class="nav-logo" alt="webinar">
+            <span>Webinar</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link d-flex flex-column align-items-center" routerLink="/calendar">
+            <img src="assets/icons/Union.png" class="nav-logo" alt="calendar">
+            <span>Calendar</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link d-flex flex-column align-items-center" routerLink="/notifications">
+            <img src="assets/icons/Bell.png" class="nav-logo" alt="notifications">
+            <span>Notifications</span>
+          </a>
+        </li>
+      </ul>
+
+      <!-- Actions (right side) -->
+      <div class="actions d-flex align-items-center">
+        <button class="btn badge-dark mr-3">+ Post</button>
+        <div class="user-info d-flex align-items-center">
+          <img src="assets/icons/user.png" alt="User" class="avatar mr-2" style="height:35px;">
+          <span class="username">Aaron ▼</span>
         </div>
       </div>
-    <!-- </div>
-  </div> -->
-</div>
-  <nav class="nav-links d-flex ml-5">
-    <a class="d-flex flex-column align-items-center justify-content-center" routerLink="/home"><i class="fa fa-house"></i><span>Home</span></a>
-    <a class="d-flex flex-column align-items-center justify-content-center" routerLink="/webinar"><img src="assets/icons/web.png" class="nav-logo" alt="home"><span>Webinar</span></a>
-    <a class="d-flex flex-column align-items-center justify-content-center" routerLink="/calendar"><img src="assets/icons/Union.png" class="nav-logo" alt="home"><span>
-      Calendar</span></a>
-    <a class="d-flex flex-column align-items-center justify-content-center"  routerLink="/notifications"><img src="assets/icons/Bell.png" class="nav-logo" alt="home"><span>Notifications</span></a>
-  </nav>
-</div>
-  
 
-  <div class="actions">
-    <button class="post-btn">+ Post</button>
-    <div class="user-info">
-      <img src="assets/icons/user.png" alt="User" class="avatar" />
-      <span class="username">Aaron ▼</span>
     </div>
-  </div>
+  </nav>
 </header>
